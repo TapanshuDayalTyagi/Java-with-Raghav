@@ -4,14 +4,18 @@ import java.util.Scanner;
 
 public class AreaCuboid {
     static void main() {
-        System.out.print("Let's Calculate the Total Surface Area of a Cuboid,\n with the side : ");
         java.util.Scanner nm = new Scanner(System.in);
-        double side = nm.nextDouble();
+        double tsa, length, width, height;
+        System.out.print("Finding the total surface area of a Cuboid provide \nLength : ");
+        length = nm.nextDouble();
+        System.out.print("Width : ");
+        width = nm.nextDouble();
+        System.out.print("Height : ");
+        height = nm.nextDouble();
 
-//        TSA of cuboid  = 6 x side x side
-        double tsa = 6 * side * side;
-        System.out.print("Total Surface Area of Cuboid with side "+ side +" units, is "+tsa+ " unit sq.");
+//        Total surface area of a Cuboid = 2 x ( lxb + bxh + lxh )
+        tsa = 2*( (length * width) + (width * height) + ( height * length ) );
+        System.out.print("\n Total surface Area of the Cuboid is "+ tsa + " unit sq.");
         nm.close();
-
     }
 }
